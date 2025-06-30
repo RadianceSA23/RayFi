@@ -1,87 +1,117 @@
 # RayFi
 
-Expense Tracker - Android App (Kotlin)
 
-A modern expense tracking application built using **Kotlin**, **Jetpack Compose**, **Room**, and **MVVM architecture**. This app helps users manage their finances by tracking daily expenses, categorizing them, visualizing with charts, and exporting data.
+# 💸 Expense Tracker – Android App (Kotlin)
+
+A modern personal finance manager built with **Kotlin**, **Jetpack Compose**, **Room**, and **MVVM + Clean Architecture**. This app helps users efficiently track daily expenses, categorize them, visualize with charts, and export data for further analysis.
+
+![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose-blue?logo=android)
+![Room DB](https://img.shields.io/badge/DB-Room-orange?logo=sqlite)
+![Kotlin](https://img.shields.io/badge/Language-Kotlin-purple?logo=kotlin)
+![Architecture](https://img.shields.io/badge/Architecture-MVVM%20%2B%20Clean-success)
 
 ---
 
 ## ✨ Features
 
-* ✉ Add, edit, delete expenses
-* ⚖ Categorize expenses (e.g., Food, Travel, Bills)
-* 📊 Chart view for monthly summaries
-* 📃 Export expenses as CSV
-* 📱 Offline-first with Room (local DB)
-* ☁ Optional Firebase sync and auth (Bonus)
+- ✏️ Add, edit, and delete expenses
+- ⚖ Categorize expenses (e.g., Food, Travel, Bills)
+- 📊 View monthly summaries via charts
+- 📁 Export expense data as CSV
+- 📱 Offline-first design with Room database
+- 🔁 Optional Firebase Auth + Sync (Bonus)
+- ⏰ Background data backup using WorkManager
 
 ---
 
-## 📁 Folder Structure
+## 🧱 Tech Stack
 
-```
-com.example.expensetracker
-|
-|│-- data                # Room DB, DAOs, Repositories
-|│-- domain              # Models and Use Cases
-|│-- presentation        # ViewModels and Composables (Screens/UI)
-|│-- utils               # Constants, Extensions
-|│-- worker              # Background sync using WorkManager
-|└-- MainActivity.kt     # App Entry Point
-```
-
-This project uses **MVVM + Clean Architecture** principles.
+| Layer          | Tech Details                                                                 |
+|----------------|------------------------------------------------------------------------------|
+| Language       | Kotlin                                                                       |
+| UI             | Jetpack Compose + Material3                                                  |
+| Architecture   | MVVM + Clean Architecture + Repository Pattern                               |
+| Local Storage  | Room Database + DAO                                                          |
+| Background     | WorkManager + Coroutines                                                     |
+| Charts         | MPAndroidChart / Compose chart libraries                                     |
+| CSV Export     | OpenCSV / Kotlin `FileWriter`                                                |
+| Cloud (Bonus)  | Firebase Authentication + Firestore (Synced using `StateFlow` and `LiveData`)|
 
 ---
 
-## ⚙ Tech Stack
+## 📸 Screenshots
 
-* **Language:** Kotlin
-* **UI:** Jetpack Compose
-* **Architecture:** MVVM + Clean Architecture
-* **Local Storage:** Room Database
-* **Background Tasks:** WorkManager with Coroutines
-* **Charts:** MPAndroidChart (or Compose alternatives)
-* **Export CSV:** OpenCSV (or custom file writer)
-* **Optional:** Firebase Auth + Firestore for sync
+> _(Add screenshots here showing home screen, add expense screen, charts, and export dialog)_
 
 ---
 
-## ⚡ Setup Instructions
-
-### Prerequisites:
-
-* Android Studio Dolphin or above
-* Kotlin 1.8+
-* Gradle 8+
-
-### Clone and Run:
+## 🔧 Setup & Run Locally
 
 ```bash
-git clone https://github.com/yourname/expense-tracker-kotlin.git
-cd expense-tracker-kotlin
+git clone https://github.com/your-username/expense-tracker-compose.git
+cd expense-tracker-compose
 ```
 
-Open the project in Android Studio, then click **Run**.
+Open the project in **Android Studio Giraffe+** with Kotlin & Compose support enabled.
 
 ---
 
-## ⏳ Future Improvements
+## 📂 Folder Structure
 
-* Income tracking
-* Budget goals
-* Recurring expenses
-* Cloud backup via Firebase
+```
+📦 app/
+ ┣ 📂 data/
+ ┃ ┣ 📂 local/         # Room DB, DAO, Entities
+ ┃ ┣ 📂 remote/        # Firebase (optional)
+ ┃ ┗ 📜 repository/
+ ┣ 📂 domain/
+ ┃ ┣ 📂 model/         # Business models
+ ┃ ┗ 📂 usecase/       # Business logic
+ ┣ 📂 presentation/
+ ┃ ┣ 📂 ui/            # Compose UI screens
+ ┃ ┣ 📂 viewmodel/     # ViewModels with StateFlow
+ ┗ 📜 MainActivity.kt
+```
 
 ---
 
-## ❤ Contributing
+## ✅ Best Practices
 
-Pull requests are welcome! For major changes, open an issue first to discuss what you would like to change.
+- Dependency Injection (Hilt/Koin)
+- Clean Architecture with modular design
+- StateFlow & LiveData combination
+- Offline-first with proper caching
+- Dark/Light theme support
+- Compose Previews for UI testing
 
 ---
 
-## © License
+## 📤 Future Enhancements
 
-MIT License. See `LICENSE` file for more info.
+- 🔔 Budget limit alerts
+- 🔁 Recurring expenses
+- 🌍 Multi-currency support
+- 🧾 PDF report export
+- 🔐 Biometric login
+
+---
+
+## 📃 License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+## 🙌 Credits
+
+- [Jetpack Compose](https://developer.android.com/jetpack/compose)
+- [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
+- [OpenCSV](http://opencsv.sourceforge.net/)
+- [Firebase](https://firebase.google.com/)
+
+---
+
+## 👨‍💻 Author
+
+Made with ❤️ by [Subburaj](https://github.com/your-username)
 
